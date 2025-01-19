@@ -1,75 +1,86 @@
-#top {
-  width: 800px;
-  background-color: #dcc9f4;
-  margin: 20px auto;
+h1,p,body {
+  margin: 0;
+}
+
+p,a {
+  font-size: 20px;
+}
+
+header {
+  margin: 0 0 20px 0;
+  background-color: rgb(244, 79, 79);
   text-align: center;
 }
 
-.top-child {
-  width: 20%;
-  background-color: #ffd9df;
-  display: inline-block;
+header h1 {
+  color: rgb(255, 255, 255);
 }
 
-#middle {
-  width: 800px;
-  height: 800px;
-  margin: 20px auto;
-  background-color: #ffd9df;
-  position: relative;
+main {
+  padding: 10px;
 }
 
-#middle-child01,
-#middle-child02,
-#middle-child03 {
-  width: 200px;
-  height: 200px;
-  background-color: #87ceeb;
-  position: absolute;
+#parent {
+  display: flex;
+  justify-content: space-between;
 }
 
-#middle-child01 {
-  top: 100px;
-  left: 100px;
+.contents {
+  border: solid 3px rgb(238, 204, 204); 
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-align: center;
 }
 
-#middle-child02 {
-  top: 300px;
-  left: 300px;
+.contents h2 {
+  font-size: 25px;
+  border-bottom: dotted 3px rgb(236, 122, 122);
+
 }
 
-#middle-child03 {
-  top: 500px;
-  left: 500px;
-}
-#bottom {
-  width: 800px;
-  height: 300px;
-  margin: 20px auto;
-  background-color: #87ceeb;
-  position: relative;
+.contents h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
 }
 
-#bottom-child01,
-#bottom-child02,
-#bottom-child03 {
-  width: 400px;
-  height: 100px;
-  background-color: #e5dcf0;
-  position: absolute;
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97,206,249);
 }
 
-#bottom-child01 {
-  top: 0;
-  left: 0;
+.contents img {
+  margin: 10px 0;
+  width: 70%;
 }
 
-#bottom-child02 {
-  top: 100px;
-  left: 200px;
+footer {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
 }
 
-#bottom-child03 {
-  top: 200px;
-  left: 400px;
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+footer a:visited {
+  color: rgb(193, 234, 251);
+}
+
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  p{
+    font-size: 25px;
+  }
+
+  #parent {
+    flex-direction: column;
+  }
 }
